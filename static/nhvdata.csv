@@ -1,4 +1,4 @@
-Neighborhood,Percent Hispanic residents,Percent white residents,Percent black residents,Percent other race residents,Percent foreign-born,Homeownership rate,Poverty rate,Low-income rate,x,y
+neighborhood,hispanic,white,black,other,foreign,homeownership,poverty,low_income,x,y
 Amity,0.154,0.233,0.548,0.065,0.148,0.496,0.214,0.396,-72.97494813,41.3337207
 Annex,0.416,0.31,0.236,0.038,0.264,0.428,0.249,0.472,-72.89571781,41.29073258
 Beaver Hills,0.179,0.171,0.605,0.045,0.13,0.439,0.254,0.472,-72.94641006,41.32635243

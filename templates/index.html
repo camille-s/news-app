@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title>Neighborhood indicators</title>
+    <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
-    Income by newighborhood
+    <h1>Neighborhood indicators</h1>
+    <table>
+        <tr>
+            <th>Neighborhood</th>
+            <th>Hispanic</th>
+            <th>White</th>
+            <th>Black</th>
+            <th>Other race</th>
+            <th>Foreign-born</th>
+            <th>Homeownership</th>
+            <th>Poverty rate</th>
+            <th>Low-income rate</th>
+        </tr>
+        {% for obj in object_list %}
+        <tr>
+            <td>{{ obj.neighborhood }}</td>
+            <td>{{ obj.hispanic }}</td>
+            <td>{{ obj.white }}</td>
+            <td>{{ obj.black }}</td>
+            <td>{{ obj.other }}</td>
+            <td>{{ obj.foreign }}</td>
+            <td>{{ obj.homeownership }}</td>
+            <td>{{ obj.poverty }}</td>
+            <td>{{ obj.low_income }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
