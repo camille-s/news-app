@@ -20,7 +20,7 @@
         </tr>
         {% for obj in object_list %}
         <tr>
-            <td>{{ obj.neighborhood }}</td>
+            <td><a href="{{ obj.id }}">{{ obj.neighborhood }}</a></td>
             <td>{{ obj.hispanic }}</td>
             <td>{{ obj.white }}</td>
             <td>{{ obj.black }}</td>
