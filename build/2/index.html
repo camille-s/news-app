@@ -15,34 +15,34 @@
 </head>
 <body>
     <div id="map"></div>
-    <h1>{{ object.neighborhood }}</h1>
+    <h1>Annex</h1>
     <h2>Income</h2>
     <ul>
         <li>
-            <strong>Poverty rate: </strong> {{ object.poverty }}
+            <strong>Poverty rate: </strong> 0.249
         </li>
         <li>
-            <strong>Low income rate: </strong> {{ object.low_income }}
+            <strong>Low income rate: </strong> 0.472
         </li>
     </ul>
     <h2>Race &amp; ethnicity</h2>
     <ul>
         <li>
-            <strong>White non-Hispanic: </strong> {{ object.white }}
+            <strong>White non-Hispanic: </strong> 0.31
         </li>
         <li>
-            <strong>Black non-Hispanic: </strong> {{ object.black }}
+            <strong>Black non-Hispanic: </strong> 0.236
         </li>
         <li>
-            <strong>Hispanic: </strong> {{ object.hispanic }}
+            <strong>Hispanic: </strong> 0.416
         </li>
         <li>
-            <strong>Other race, non-Hispanic: </strong> {{ object.other }}
+            <strong>Other race, non-Hispanic: </strong> 0.038
         </li>
     </ul>
 
     <script type="text/javascript">
-        var map = L.map('map').setView([{{ object.y }}, {{ object.x }}], 14);
+        var map = L.map('map').setView([41.29073258, -72.89571781], 14);
         var basemap = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}', {
         	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         	subdomains: 'abcd',
@@ -51,7 +51,7 @@
         	ext: 'png'
         });
         map.addLayer(basemap);
-        var marker = L.marker([{{ object.y }}, {{ object.x }}]).addTo(map);
+        var marker = L.marker([41.29073258, -72.89571781]).addTo(map);
     </script>
 </body>
 </html>

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Neighborhood indicators</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.css" />
+    <link rel="stylesheet" href="static/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.js"></script>
+
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <h1>Neighborhood indicators</h1>
+    <table>
+        <tr>
+            <th>Neighborhood</th>
+            <th>Hispanic</th>
+            <th>White</th>
+            <th>Black</th>
+            <th>Other race</th>
+            <th>Foreign-born</th>
+            <th>Homeownership</th>
+            <th>Poverty rate</th>
+            <th>Low-income rate</th>
+        </tr>
+        
+        <tr>
+            <td><a href="1">Amity</a></td>
+            <td>0.154</td>
+            <td>0.233</td>
+            <td>0.548</td>
+            <td>0.065</td>
+            <td>0.148</td>
+            <td>0.496</td>
+            <td>0.214</td>
+            <td>0.396</td>
+        </tr>
+        
+        <tr>
+            <td><a href="2">Annex</a></td>
+            <td>0.416</td>
+            <td>0.31</td>
+            <td>0.236</td>
+            <td>0.038</td>
+            <td>0.264</td>
+            <td>0.428</td>
+            <td>0.249</td>
+            <td>0.472</td>
+        </tr>
+        
+        <tr>
+            <td><a href="3">Beaver Hills</a></td>
+            <td>0.179</td>
+            <td>0.171</td>
+            <td>0.605</td>
+            <td>0.045</td>
+            <td>0.13</td>
+            <td>0.439</td>
+            <td>0.254</td>
+            <td>0.472</td>
+        </tr>
+        
+        <tr>
+            <td><a href="4">Dixwell</a></td>
+            <td>0.155</td>
+            <td>0.146</td>
+            <td>0.652</td>
+            <td>0.047</td>
+            <td>0.091</td>
+            <td>0.143</td>
+            <td>0.328</td>
+            <td>0.54</td>
+        </tr>
+        
+        <tr>
+            <td><a href="5">Downtown</a></td>
+            <td>0.104</td>
+            <td>0.572</td>
+            <td>0.098</td>
+            <td>0.226</td>
+            <td>0.231</td>
+            <td>0.093</td>
+            <td>0.231</td>
+            <td>0.388</td>
+        </tr>
+        
+        <tr>
+            <td><a href="6">Dwight</a></td>
+            <td>0.314</td>
+            <td>0.214</td>
+            <td>0.39</td>
+            <td>0.082</td>
+            <td>0.229</td>
+            <td>0.103</td>
+            <td>0.377</td>
+            <td>0.712</td>
+        </tr>
+        
+        <tr>
+            <td><a href="7">East Rock</a></td>
+            <td>0.107</td>
+            <td>0.683</td>
+            <td>0.068</td>
+            <td>0.142</td>
+            <td>0.258</td>
+            <td>0.282</td>
+            <td>0.131</td>
+            <td>0.283</td>
+        </tr>
+        
+        <tr>
+            <td><a href="8">East Shore</a></td>
+            <td>0.04</td>
+            <td>0.729</td>
+            <td>0.182</td>
+            <td>0.049</td>
+            <td>0.067</td>
+            <td>0.695</td>
+            <td>0.025</td>
+            <td>0.127</td>
+        </tr>
+        
+        <tr>
+            <td><a href="9">Edgewood</a></td>
+            <td>0.111</td>
+            <td>0.243</td>
+            <td>0.577</td>
+            <td>0.069</td>
+            <td>0.121</td>
+            <td>0.234</td>
+            <td>0.23</td>
+            <td>0.458</td>
+        </tr>
+        
+        <tr>
+            <td><a href="10">Fair Haven</a></td>
+            <td>0.649</td>
+            <td>0.12</td>
+            <td>0.205</td>
+            <td>0.026</td>
+            <td>0.186</td>
+            <td>0.199</td>
+            <td>0.341</td>
+            <td>0.635</td>
+        </tr>
+        
+        <tr>
+            <td><a href="11">Fair Haven Heights</a></td>
+            <td>0.393</td>
+            <td>0.346</td>
+            <td>0.216</td>
+            <td>0.044</td>
+            <td>0.103</td>
+            <td>0.295</td>
+            <td>0.168</td>
+            <td>0.445</td>
+        </tr>
+        
+        <tr>
+            <td><a href="12">Hill</a></td>
+            <td>0.46</td>
+            <td>0.118</td>
+            <td>0.364</td>
+            <td>0.058</td>
+            <td>0.152</td>
+            <td>0.214</td>
+            <td>0.447</td>
+            <td>0.729</td>
+        </tr>
+        
+        <tr>
+            <td><a href="13">Newhallville</a></td>
+            <td>0.17</td>
+            <td>0.003</td>
+            <td>0.808</td>
+            <td>0.02</td>
+            <td>0.091</td>
+            <td>0.309</td>
+            <td>0.334</td>
+            <td>0.626</td>
+        </tr>
+        
+        <tr>
+            <td><a href="14">Prospect Hill</a></td>
+            <td>0.091</td>
+            <td>0.36</td>
+            <td>0.243</td>
+            <td>0.306</td>
+            <td>0.265</td>
+            <td>0.272</td>
+            <td>0.149</td>
+            <td>0.313</td>
+        </tr>
+        
+        <tr>
+            <td><a href="15">Quinnipiac Meadows</a></td>
+            <td>0.214</td>
+            <td>0.252</td>
+            <td>0.413</td>
+            <td>0.12</td>
+            <td>0.192</td>
+            <td>0.44</td>
+            <td>0.254</td>
+            <td>0.419</td>
+        </tr>
+        
+        <tr>
+            <td><a href="16">West River</a></td>
+            <td>0.352</td>
+            <td>0.135</td>
+            <td>0.472</td>
+            <td>0.041</td>
+            <td>0.162</td>
+            <td>0.159</td>
+            <td>0.32</td>
+            <td>0.604</td>
+        </tr>
+        
+        <tr>
+            <td><a href="17">West Rock</a></td>
+            <td>0.119</td>
+            <td>0.509</td>
+            <td>0.307</td>
+            <td>0.064</td>
+            <td>0.129</td>
+            <td>0.146</td>
+            <td>0.388</td>
+            <td>0.559</td>
+        </tr>
+        
+        <tr>
+            <td><a href="18">Westville</a></td>
+            <td>0.104</td>
+            <td>0.559</td>
+            <td>0.267</td>
+            <td>0.07</td>
+            <td>0.144</td>
+            <td>0.473</td>
+            <td>0.101</td>
+            <td>0.196</td>
+        </tr>
+        
+        <tr>
+            <td><a href="19">Wooster Square/Mill River</a></td>
+            <td>0.241</td>
+            <td>0.503</td>
+            <td>0.188</td>
+            <td>0.069</td>
+            <td>0.136</td>
+            <td>0.215</td>
+            <td>0.295</td>
+            <td>0.499</td>
+        </tr>
+        
+    </table>
+
+    <script type="text/javascript">
+        var map = L.map('map').setView([41.3083, -72.9279], 12);
+        var basemap = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}', {
+        	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        	subdomains: 'abcd',
+        	minZoom: 0,
+        	maxZoom: 20,
+        	ext: 'png'
+        });
+        map.addLayer(basemap);
+
+        var data = {
+            'type': 'FeatureCollection',
+            'features': [
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Amity',
+                        'id': '1'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.97494813, 41.3337207]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Annex',
+                        'id': '2'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.89571781, 41.29073258]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Beaver Hills',
+                        'id': '3'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.94641006, 41.32635243]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Dixwell',
+                        'id': '4'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.93396087, 41.3185194]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Downtown',
+                        'id': '5'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.92563086, 41.31008119]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Dwight',
+                        'id': '6'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.93882033, 41.31204017]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'East Rock',
+                        'id': '7'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.90646926, 41.32260086]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'East Shore',
+                        'id': '8'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.89494128, 41.26673449]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Edgewood',
+                        'id': '9'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.95101958, 41.31696814]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Fair Haven',
+                        'id': '10'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.89668145, 41.31061452]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Fair Haven Heights',
+                        'id': '11'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.88013525, 41.30697454]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Hill',
+                        'id': '12'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.93729179, 41.29478654]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Newhallville',
+                        'id': '13'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.93354848, 41.32903962]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Prospect Hill',
+                        'id': '14'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.92109057, 41.32743403]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Quinnipiac Meadows',
+                        'id': '15'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.87758865, 41.32559346]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'West River',
+                        'id': '16'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.94945074, 41.30604305]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'West Rock',
+                        'id': '17'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.95957597, 41.3386791]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Westville',
+                        'id': '18'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.97581907, 41.32031476]
+                    }
+                } , 
+                
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'neighborhood': 'Wooster Square/Mill River',
+                        'id': '19'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [-72.91257261, 41.30713406]
+                    }
+                } 
+                
+            ]
+        };
+        var dataLayer = L.geoJson(data, {
+            pointToLayer: function(feature, latlng) {
+                return new L.CircleMarker(latlng, {radius: 9, fillOpacity: 0.8});
+            },
+            style: {
+                'color': 'rgb(112, 66, 180)',
+                'stroke-width': 0
+            },
+            onEachFeature: function(feature, layer) {
+                layer.bindPopup(
+                    '<a href="' + feature.properties.id + '">' + feature.properties.neighborhood + '</a>'
+                );
+            }
+        });
+        map.addLayer(dataLayer);
+    </script>
+
+</body>
+</html>
